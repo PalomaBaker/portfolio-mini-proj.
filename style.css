@@ -65,12 +65,38 @@ button:hover{
     background-color: rgba(0,136,169,0.8)
 }
 
+.row{
+    display:flex;
+}
 
-
-.card{
+.left-card{
     height:365px;
-    width:335px; 
+    flex:1;
     padding:20px 35px;
     border-radius:20px;
-    box-sizing: content-box;
+    background-color: rgb(77, 77, 74);
+    margin:40px;
+    border-right: 5px solid blue ;
+    
+}
+
+.right-card{
+    background-color: beige;
+    height:365px;
+    flex:3;
+    padding:20px 35px;
+    border-radius:20px;
+    margin: 40px;
+}
+
+@media screen and (max-width: 980px){
+    .right-card{
+        flex:1;
+        
+        
+    }
+    .row{
+        flex-direction: column;
+        
+    }
 }
