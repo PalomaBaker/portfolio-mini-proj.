@@ -1,102 +1,143 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
     background-color: #24252A;
+    color: #edf0f1;
 }
 
-li, a, button {
-font-family: "Montserrat", sans-serif;
-font-weight: 500;
-font-size: 16px;
-color:#edf0f1;
-text-decoration: none;
-}
-
-.hero_image{
-    height: 150px;
-    width:100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-header{
-    display:flex;
-    justify-content: flex-end;
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding:20px 10%;
+    padding: 20px 10%;
+    background-color: #333;
+    color: #fff;
 }
 
-.logo {
-    cursor: pointer;
-    margin-right: auto;
+.logo img {
+    width: 80px; /* Adjust the width to your preference */
+    height: auto;
+    margin-right: 10px;
 }
 
-.nav_links{
-    list-style:none;
+.nav_links {
+    list-style: none;
 }
 
 .nav_links li {
     display: inline-block;
-    padding:0px 20px;
+    padding: 0 20px;
 }
 
-.nav_links li a{
-    transition: all 0.3s ease 0s;
+.nav_links li a {
+    text-decoration: none;
+    color: #edf0f1;
+    transition: all 0.3s ease;
 }
 
 .nav_links li a:hover {
- color: #0088a9
+    color: #0088a9;
 }
 
-button {
-    padding:9px 25px;
-    background-color: rgba(0,136,169,1);
-    border:none;
+.cta button {
+    padding: 9px 25px;
+    background-color: #0088a9;
+    border: none;
     border-radius: 50px;
-    cursor:pointer;
-    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #fff;
 }
 
-button:hover{
-    background-color: rgba(0,136,169,0.8)
+.cta button:hover {
+    background-color: #007184;
 }
 
-.row{
-    display:flex;
+/* Hero Section Styles */
+.hero {
+    text-align: center;
 }
 
-.left-card{
-    height:365px;
-    flex:1;
-    padding:20px 35px;
-    border-radius:20px;
-    background-color: rgb(77, 77, 74);
-    margin:40px;
-    border-right: 5px solid blue ;
-    
+.hero_image {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
 }
 
-.right-card{
-    background-color: beige;
-    height:365px;
-    flex:3;
-    padding:20px 35px;
-    border-radius:20px;
+/* Section Styles */
+.section {
+    padding: 50px 0;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* About and Contact Card Styles */
+.left-card,
+.right-card {
+    background-color: #1E1E1E;
+    color: #edf0f1;
+    border-radius: 20px;
+    padding: 20px 35px;
     margin: 40px;
+    flex: 1;
 }
 
-@media screen and (max-width: 980px){
-    .right-card{
-        flex:1;
-        
-        
-    }
-    .row{
+.left-card {
+    border-right: 5px solid #0088a9;
+}
+
+/* Portfolio Grid Styles */
+.portfolio_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.portfolio_grid a {
+    text-decoration: none;
+    color: #edf0f1;
+    text-align: center;
+}
+
+.portfolio_grid a img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio_grid a img:hover {
+    transform: scale(1.05);
+}
+
+.portfolio_grid a span {
+    display: block;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 980px) {
+    .row {
         flex-direction: column;
-        
+    }
+
+    .left-card,
+    .right-card {
+        margin: 20px;
     }
 }
